@@ -1,0 +1,13 @@
+{
+  "name": "balloon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "prune": "pnpm -r exec -- rm -rf node_modules && rm pnpm-lock.yaml",
+    "test": "pnpm recursive run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
