@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "start": "pnpm -r exec -- pnpm install",
     "prune": "pnpm -r exec -- rm -rf node_modules && rm pnpm-lock.yaml",
-    "test": "pnpm recursive run test"
+    "test": "pnpm recursive run test",
+    "dev": "pnpm --filter '*' run dev"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "balloon-color": "workspace:^1.0.0"
+  }
 }
