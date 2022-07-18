@@ -41,7 +41,6 @@
   }
 
   h1 {
-    /* color: #ff3e00; */
     color: var(--textColor);
     text-transform: uppercase;
     font-size: 4rem;

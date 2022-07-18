@@ -10,6 +10,9 @@
     "prune": "pnpm -r exec -- rm -rf node_modules && rm pnpm-lock.yaml",
     "test": "pnpm recursive run test",
     "dev": "pnpm --filter '*' run dev",
+    "dev:gold": "pnpm --filter 'balloon-gold' run dev",
+    "dev:tree": "pnpm --filter 'balloon-tree' run dev",
+    "dev:water": "pnpm --filter 'balloon-water' run dev",
     "build": "pnpm --filter './packages/**' build",
     "release": "pnpm build && pnpm release:only",
     "release:only": "echo test"
@@ -19,5 +22,8 @@
   "license": "ISC",
   "devDependencies": {
     "must-used": "^1.0.0"
+  },
+  "dependencies": {
+    "balloon-color": "workspace:^1.0.0"
   }
 }
