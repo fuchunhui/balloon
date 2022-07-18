@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "private": "true",
   "scripts": {
+    "preinstall": "npx must-used pnpm",
     "start": "pnpm -r exec -- pnpm install",
     "prune": "pnpm -r exec -- rm -rf node_modules && rm pnpm-lock.yaml",
     "test": "pnpm recursive run test",
-    "dev": "pnpm --filter '*' run dev"
+    "dev": "pnpm --filter '*' run dev",
+    "build": "pnpm --filter './packages/**' build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "balloon-color": "workspace:^1.0.0"
+  "devDependencies": {
+    "must-used": "^1.0.0"
   }
 }
