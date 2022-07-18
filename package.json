@@ -10,7 +10,9 @@
     "prune": "pnpm -r exec -- rm -rf node_modules && rm pnpm-lock.yaml",
     "test": "pnpm recursive run test",
     "dev": "pnpm --filter '*' run dev",
-    "build": "pnpm --filter './packages/**' build"
+    "build": "pnpm --filter './packages/**' build",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "echo test"
   },
   "keywords": [],
   "author": "",

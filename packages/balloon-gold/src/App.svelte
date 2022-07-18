@@ -1,11 +1,14 @@
 <script lang="ts">
   import logo from './assets/svelte.png'
   import Counter from './lib/Counter.svelte'
+  import {color} from 'balloon-color';
+
+  const textColor = color();
 </script>
 
 <main>
   <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Typescript!</h1>
+  <h1 style="--textColor: {textColor}">Hello Typescript!</h1>
 
   <Counter />
 
@@ -38,7 +41,8 @@
   }
 
   h1 {
-    color: #ff3e00;
+    /* color: #ff3e00; */
+    color: var(--textColor);
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 100;
